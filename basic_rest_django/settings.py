@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'basic_rest_django.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'serial_db',
+        'NAME': 'request_show',
         'USER': 'viki',
         'PASSWORD': '123456',
         'HOST': 'localhost',

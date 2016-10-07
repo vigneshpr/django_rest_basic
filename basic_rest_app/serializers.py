@@ -1,6 +1,12 @@
 from rest_framework import serializers
-from basic_rest_app.models import Student
-class StudentSerializer(serializers.ModelSerializer):
+from .models import Book
+class BookSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Student
-        fields = ('firstname', 'lastname', 'dept', 'gender', 'language')
+        model = Book
+        
+        '''fields = ('firstname', 'lastname', 'dept', 'gender', 'language')
+bookname = models.CharField(max_length=20, blank=True, unique=True)
+    author = models.CharField(max_length=10, blank=True, default='')
+    publication = models.CharField(max_length=30, blank=True, default='')
+    dept = models.BooleanField(default=False)
+    published_year'''

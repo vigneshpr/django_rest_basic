@@ -1,11 +1,16 @@
 from django.db import models
 
-class Student(models.Model):
-    firstname = models.CharField(max_length=100, blank=True, unique=True)
-    lastname = models.CharField(max_length=100, blank=True, default='')
-    dept = models.TextField(unique=True)
-    gender = models.BooleanField(default=False)
-    language = models.CharField(default='python', max_length=100)
+class Book(models.Model):
+    bookname = models.CharField(max_length=20, blank=True, unique=True)
+    author = models.CharField(max_length=10, blank=True, default='')
+    publication = models.TextField(max_length=30)
+    dept = models.CharField(max_length=30)
+    published_year= models.IntegerField(default=0)
     
-    class Meta:
-        ordering = ('firstname',)
+    '''class Meta:
+        ordering = ('bookname',)'''
+
+
+
+
+    
